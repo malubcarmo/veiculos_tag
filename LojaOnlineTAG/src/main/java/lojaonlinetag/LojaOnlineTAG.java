@@ -135,5 +135,3 @@ public class LojaOnlineTAG {
         scanner.close();
     }
 }
-
-//test merge

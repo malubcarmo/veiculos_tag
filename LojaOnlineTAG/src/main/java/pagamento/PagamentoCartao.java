@@ -20,4 +20,3 @@ public class PagamentoCartao extends Pagamento {
         System.out.println("Guarde este código para acompanhar seu pedido.");
     }
 }
-//teste

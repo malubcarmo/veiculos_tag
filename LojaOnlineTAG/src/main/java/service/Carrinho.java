@@ -44,11 +44,9 @@ public class Carrinho {
         // PARADIGMA FUNCIONAL: forEach
         // Percorre cada item e tira 1 unidade do estoque real
         itens.forEach(p -> p.debitarEstoque(1));
-        System.out.println(">> Estoque atualizado no sistema.");
     }
 
     public void limpar() {
         itens.clear();
-        System.out.println(">> Carrinho esvaziado.");
     }
 }

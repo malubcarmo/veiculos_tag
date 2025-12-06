@@ -1,4 +1,4 @@
-package com.mycompany.lojaonline.pagamento;
+package pagamento;
 
 import java.util.UUID; // Importação necessária
 

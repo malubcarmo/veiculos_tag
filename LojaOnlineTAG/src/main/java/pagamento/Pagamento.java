@@ -1,4 +1,4 @@
-package com.mycompany.lojaonline.pagamento;
+package pagamento;
 
 public class Pagamento {
     public void processarPagamento(double total) {

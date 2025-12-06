@@ -18,5 +18,5 @@ public class PagamentoCartao extends Pagamento {
         String codigoRastreio = UUID.randomUUID().toString().substring(0, 8).toUpperCase();
         System.out.println(">> CÓDIGO DE RASTREIO: TRK-" + codigoRastreio);
         System.out.println("Guarde este código para acompanhar seu pedido.");
-    }
+    }
 }

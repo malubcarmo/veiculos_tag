@@ -50,3 +50,5 @@ public class Carrinho {
         itens.clear();
     }
 }
+
+// apaga malu

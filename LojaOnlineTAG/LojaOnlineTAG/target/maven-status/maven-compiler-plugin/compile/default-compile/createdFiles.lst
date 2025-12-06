@@ -1,0 +1,6 @@
+com\mycompany\lojaonline\service\BancoDeDados.class
+com\mycompany\lojaonline\entity\Peca.class
+com\mycompany\lojaonline\entity\Produto.class
+com\mycompany\lojaonline\entity\Veiculo.class
+com\mycompany\lojaonline\service\Carrinho.class
+com\mycompany\lojaonlinetag\LojaOnlineTAG.class

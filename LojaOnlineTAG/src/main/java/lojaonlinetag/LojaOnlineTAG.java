@@ -22,7 +22,7 @@ public class LojaOnlineTAG {
             System.out.println("2. Adicionar ao Carrinho (ID)");
             System.out.println("3. Remover do Carrinho (ID)");
             System.out.println("4. Ver Carrinho e Total");
-            System.out.println("5. Finalizar Compra"); // Opção Nova
+            System.out.println("5. Finalizar Compra");
             System.out.println("0. Sair");
             System.out.print("Escolha: ");
 
@@ -56,7 +56,7 @@ public class LojaOnlineTAG {
                     }
                     break;
 
-                case 2: // ADICIONAR
+                case 2: //adicionar produto ao carrinho
                     System.out.print("Digite o ID do produto para adicionar: ");
                     int idAdd = scanner.nextInt();
                     Produto prod = BancoDeDados.buscarPorId(idAdd);
@@ -64,25 +64,25 @@ public class LojaOnlineTAG {
                     else System.out.println("Produto não encontrado!");
                     break;
 
-                case 3: // REMOVER (Funcional: removeIf)
+                case 3: //remove o produto do carrinho
                     System.out.print("Digite o ID do produto para remover: ");
                     int idRem = scanner.nextInt();
                     carrinho.remover(idRem);
                     break;
 
-                case 4: // TOTAL (Funcional: Map/Reduce)
+                case 4: //calcula o valor toatl do carinho com velor do frete por kg
                     carrinho.listarItens();
                     System.out.printf("TOTAL FINAL (com impostos/frete): R$ %.2f%n", carrinho.calcularTotal());
                     break;
 
-                case 5: // FINALIZAR COMPRA
+                case 5: //finaliza a compra
                     double total = carrinho.calcularTotal();
                     if (total <= 0) {
                         System.out.println("Seu carrinho está vazio!");
                         break;
                     }
 
-                    // Resumo e Cálculo
+                    //escolhe a opcao de pagamento e no caso do pix gera o desconto de 10%
                     double valorNoPix = total * 0.90;
                     double valorNoCartao = total;
 
@@ -110,10 +110,10 @@ public class LojaOnlineTAG {
                     if (pagamento != null) {
                         pagamento.processarPagamento(total);
 
-                        // 1. Debita do estoque oficial
+                        //Debita do estoque
                         carrinho.baixarEstoque();
 
-                        // 2. Limpa o carrinho para a próxima compra
+                        //Limpa o carrinho para a próxima compra
                         carrinho.limpar();
 
                         System.out.println("\nObrigado pela preferência! Volte sempre.");
@@ -128,6 +128,7 @@ public class LojaOnlineTAG {
 
                 default:
                     System.out.println("Opção inválida!");
+                    //se o usuário escolher alguma opção fora das listas (0 a 5)
             }
         }
         scanner.close();

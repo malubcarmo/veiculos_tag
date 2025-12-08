@@ -15,7 +15,7 @@ public class LojaOnlineTAG {
         Scanner scanner = new Scanner(System.in);
         boolean rodando = true;
 
-        System.out.println("=== CONCESSIONÁRIA MULTI-PARADIGMA ===");
+        System.out.println("=== CONCESSIONÁRIA VEIGA DE ALMEIDA ===");
 
         while (rodando) {
             System.out.println("\n1. Ver Catálogo por Categoria");

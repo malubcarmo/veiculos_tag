@@ -6,9 +6,9 @@ public abstract class Produto {
     private double precoBase;
     private String categoria;
     private String descricao;
-    private int estoque; // <--- NOVO CAMPO
+    private int estoque; 
 
-    // Construtor atualizado recebendo estoque
+    // Construtor para receber as informações do estoque
     public Produto(int id, String nome, double precoBase, String categoria, String descricao, int estoque) {
         this.id = id;
         this.nome = nome;
@@ -23,9 +23,9 @@ public abstract class Produto {
     public double getPrecoBase() { return precoBase; }
     public String getCategoria() { return categoria; }
     public String getDescricao() { return descricao; }
-    public int getEstoque() { return estoque; } // <--- Getter do estoque
+    public int getEstoque() { return estoque; } //Getter do estoque
 
-    // Método útil para debitar estoque no futuro
+    //metodo de debito do estoque
     public void debitarEstoque(int qtd) {
         if (this.estoque >= qtd) {
             this.estoque -= qtd;
@@ -36,7 +36,7 @@ public abstract class Produto {
 
     @Override
     public String toString() {
-        // Adicionei a informação do Estoque na exibição
+        //mostra a quantidade em estoque na hora de finalizar a compra
         return String.format("[%d] %s - R$ %.2f (%s) | Estoque: %d un.", id, nome, precoBase, categoria, estoque);
     }
 }

@@ -1,6 +1,6 @@
 package pagamento;
 
-import java.util.UUID;
+import java.util.UUID; //importação para o código de rastreio
 
 public class PagamentoCartao extends Pagamento {
 

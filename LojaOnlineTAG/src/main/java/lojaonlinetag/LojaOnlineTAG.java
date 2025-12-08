@@ -3,7 +3,7 @@ package lojaonlinetag;
 import com.mycompany.lojaonline.entity.Produto;
 import com.mycompany.lojaonline.service.BancoDeDados;
 import com.mycompany.lojaonline.service.Carrinho;
-import pagamento.*; // IMPORTANTE: Importa todos os pagamentos
+import pagamento.*; // Importa todos os pagamentos
 import java.util.List;
 import java.util.Scanner;
 

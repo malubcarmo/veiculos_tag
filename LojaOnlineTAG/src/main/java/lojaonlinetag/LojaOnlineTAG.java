@@ -110,7 +110,6 @@ public class LojaOnlineTAG {
                     if (pagamento != null) {
                         pagamento.processarPagamento(total);
 
-                        // --- NOVIDADE AQUI ---
                         // 1. Debita do estoque oficial
                         carrinho.baixarEstoque();
 
@@ -118,8 +117,7 @@ public class LojaOnlineTAG {
                         carrinho.limpar();
 
                         System.out.println("\nObrigado pela preferência! Volte sempre.");
-                        // Não vamos fechar o programa (rodando=false) para você poder
-                        // consultar o catálogo novamente e ver que o estoque baixou!
+                        //peograma continua rodando e faz a dedução de itens do estoque
                     }
                     break;
 
